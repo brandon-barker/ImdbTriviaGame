@@ -1,7 +1,7 @@
 html,
 body {
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif !important;
     background: url('/images/tweed.png') repeat;
     color: #fff;
     /* The html and body elements cannot have any padding or margin. */
