@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cfeabe3-7a70-4a08-a1c4-6058aade3972" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Brandon.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Brandon.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/game.js" afterPath="$PROJECT_DIR$/public/javascripts/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imdb.js" afterPath="$PROJECT_DIR$/imdb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/views/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -15,11 +10,11 @@
     <file path="/user.js" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1375984780857" ignored="false" />
     <file path="/app.js" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376071622384" ignored="false" />
     <file path="/index.jade" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1375989707726" ignored="false" />
-    <file path="/index.html" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376072752240" ignored="false" />
+    <file path="/index.html" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376073117102" ignored="false" />
     <file path="/game.js" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376071388524" ignored="false" />
-    <file path="/style.css" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376072773744" ignored="false" />
+    <file path="/style.css" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376073144902" ignored="false" />
     <file path="/imdb.js" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376068014747" ignored="false" />
-    <file path="/Dummy.txt" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376058495365" ignored="false" />
+    <file path="/Dummy.txt" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376073131470" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +55,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="85" selection-start="4991" selection-end="4991" vertical-scroll-proportion="-9.419354">
+            <state line="99" column="42" selection-start="5329" selection-end="5329" vertical-scroll-proportion="-12.258064">
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -71,7 +66,7 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="17" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.7716263">
+            <state line="95" column="17" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.7041522">
               <folding />
             </state>
           </provider>
@@ -303,8 +298,36 @@
       <created>1376058499227</created>
       <updated>1376058499227</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- Results view&#10;- All views complete&#10;- Javascript switching&#10;- Server side tracking of points&#10;- Game Over trigger">
+      <created>1376072973714</created>
+      <updated>1376072973714</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Table column widths">
+      <created>1376073134330</created>
+      <updated>1376073134330</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1932" height="1052" extended-state="6" />
@@ -312,15 +335,15 @@
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1935654" sideWeight="0.67594653" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32405347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -371,7 +394,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Seperate intro, username and game sections with javascript switching&#10;- Serves up new rounds when players reconnect" />
+    <option name="LAST_COMMIT_MESSAGE" value="Table column widths" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -389,6 +412,8 @@
     <MESSAGE value="Intro messages and explanation" />
     <MESSAGE value="Added Font Awesome" />
     <MESSAGE value="- Seperate intro, username and game sections with javascript switching&#10;- Serves up new rounds when players reconnect" />
+    <MESSAGE value="- Results view&#10;- All views complete&#10;- Javascript switching&#10;- Server side tracking of points&#10;- Game Over trigger" />
+    <MESSAGE value="Table column widths" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -496,7 +521,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="85" selection-start="4991" selection-end="4991" vertical-scroll-proportion="-9.419354">
+        <state line="99" column="42" selection-start="5329" selection-end="5329" vertical-scroll-proportion="-12.258064">
           <folding>
             <element signature="n#style#0;n#p#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -505,7 +530,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="17" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.7716263">
+        <state line="95" column="17" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.7041522">
           <folding />
         </state>
       </provider>

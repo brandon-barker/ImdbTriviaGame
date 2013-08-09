@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #waiting, .results-success, .results, .results-fail, .results-draw, .game {
-    display: block;
+    display: none;
 }
 
 .results-success, .results-draw, .results-fail {
