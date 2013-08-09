@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5 {
     display: block;
 }
 
-.question, .round-count, .leave-game, .score-row {
+.question, .round-count, .leave-game, .score-row, .retry-game {
     padding: 5px;
     font-size: 1.6em;
     font-weight: bold;

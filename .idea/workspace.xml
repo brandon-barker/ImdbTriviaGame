@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cfeabe3-7a70-4a08-a1c4-6058aade3972" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/game.js" afterPath="$PROJECT_DIR$/public/javascripts/game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/views/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -10,11 +12,11 @@
     <file path="/user.js" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1375984780857" ignored="false" />
     <file path="/app.js" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376071622384" ignored="false" />
     <file path="/index.jade" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1375989707726" ignored="false" />
-    <file path="/index.html" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376073117102" ignored="false" />
-    <file path="/game.js" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376071388524" ignored="false" />
-    <file path="/style.css" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376073144902" ignored="false" />
+    <file path="/index.html" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376074982934" ignored="false" />
+    <file path="/game.js" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376074770195" ignored="false" />
+    <file path="/style.css" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376075010816" ignored="false" />
     <file path="/imdb.js" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376068014747" ignored="false" />
-    <file path="/Dummy.txt" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376073131470" ignored="false" />
+    <file path="/Dummy.txt" changelist="7cfeabe3-7a70-4a08-a1c4-6058aade3972" time="1376073155253" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +57,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="42" selection-start="5329" selection-end="5329" vertical-scroll-proportion="-12.258064">
+            <state line="116" column="89" selection-start="6153" selection-end="6153" vertical-scroll-proportion="-13.67742">
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -66,7 +68,7 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="17" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.7041522">
+            <state line="95" column="17" selection-start="1956" selection-end="1956" vertical-scroll-proportion="0.42906573">
               <folding />
             </state>
           </provider>
@@ -75,7 +77,7 @@
       <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="58" selection-start="2089" selection-end="2089" vertical-scroll-proportion="0.0">
+            <state line="30" column="33" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -306,7 +308,11 @@
       <created>1376073134330</created>
       <updated>1376073134330</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="display: none">
+      <created>1376073159274</created>
+      <updated>1376073159274</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -394,7 +400,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Table column widths" />
+    <option name="LAST_COMMIT_MESSAGE" value="display: none" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -414,6 +420,7 @@
     <MESSAGE value="- Seperate intro, username and game sections with javascript switching&#10;- Serves up new rounds when players reconnect" />
     <MESSAGE value="- Results view&#10;- All views complete&#10;- Javascript switching&#10;- Server side tracking of points&#10;- Game Over trigger" />
     <MESSAGE value="Table column widths" />
+    <MESSAGE value="display: none" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -514,14 +521,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="58" selection-start="2089" selection-end="2089" vertical-scroll-proportion="0.0">
+        <state line="30" column="33" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="42" selection-start="5329" selection-end="5329" vertical-scroll-proportion="-12.258064">
+        <state line="116" column="89" selection-start="6153" selection-end="6153" vertical-scroll-proportion="-13.67742">
           <folding>
             <element signature="n#style#0;n#p#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -530,7 +537,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="17" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.7041522">
+        <state line="95" column="17" selection-start="1956" selection-end="1956" vertical-scroll-proportion="0.42906573">
           <folding />
         </state>
       </provider>

@@ -28,6 +28,7 @@ $(function() {
             $(".player-info").show();
             $(".game").hide();
             $(".intro").hide();
+            $(".results").hide();
             $.get('/game/stop/');
         },
         startRound: function() {
