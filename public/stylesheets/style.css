@@ -7,6 +7,10 @@ body {
     /* The html and body elements cannot have any padding or margin. */
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
 /* Wrapper for page content to push down footer */
 #wrap {
     min-height: 100%;
@@ -53,13 +57,16 @@ body {
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-.container {
-    width: auto;
-    max-width: 680px;
-    padding: 0 15px;
+
+
+.intro {
+    padding: 0px 0px 30px 0px;
 }
-.container .credit {
-    margin: 20px 0;
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 20px 0 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .game {
@@ -83,84 +90,3 @@ body {
     text-align: center;
     clear: both;
 }
-
-/*body {
-    width: 98%;
-    height: 100%;
-    padding: 10px;
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    background: url('/images/tweed.png') repeat;
-    margin: 0 auto;
-}
-
-.a {
-    color: #00B7FF;
-}
-
-header {
-    position: relative;
-    max-width: 600px;
-    height: 80px;
-    padding: 20px 0px 5px 0px;
-    margin-bottom: 25px;
-    display: inline-block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-    font-size: 2.35em;
-    margin: 0;
-}
-
-small {
-    font-size: 0.8em;
-}
-
-footer {
-    background: url('/images/binding_dark.png') repeat;
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    font-size:13px;
-    padding:20px 0;
-    border-top: 4px solid #2e2e2e;
-}
-
-footer div {
-    text-align: center;
-    margin:0 auto;
-}
-
-footer p {
-    float:left;
-}
-
-#playerInfo {
-    margin: 0 auto;
-    text-align: center;
-    clear: both;
-}
-
-.container {
-    max-width: 650px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.game {
-    display: block;
-}
-
-.waiting-for-player {
-    display: block;
-}
-
-.logo {
-    background: url('/images/imdb.png') no-repeat center;
-    display: inline-block;
-    width: 101px;
-    height: 49px;
-    text-indent: -9999px;
-}    */

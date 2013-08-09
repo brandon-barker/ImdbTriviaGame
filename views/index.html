@@ -22,8 +22,27 @@
         <!-- Begin page content -->
         <div class="container">
             <div class="page-header">
-                <h1><span class="logo">IMDb</span> IMDb Trivia Game</h1>
-                <div class="text-center">How well do you know your IMDb Top 250?</div>
+                <h1><span class="logo">IMDb</span> IMDb Trivia Game <small>How well do you know your IMDb Top 250?</small></h1>
+            </div>
+
+            <div class="intro">
+                <h2>Welcome to the IMDb Trivia Game!</h2>
+
+                <h3>What is this?</h3>
+                <p>
+                    The IMDb Trivia Game is a mobile web game which allows 2 players to connect from their mobile devices
+                    and play against each other, testing their knowledge of the IMDb Top 250 list.
+                </p>
+
+                <h3>How does it work?</h3>
+                <p>
+                    A game consists of 8 rounds, in each round a random movie will be displayed from the IMDb Top 250 list
+                    which you will then have to guess the year in which the movie was released. Players who guess correctly
+                    will be awarded with 5 points, while players who guess incorrectly will have 3 points deducted from their
+                    score. The player with the most points at the end of the 8 rounds wins!
+                </p>
+                <br />
+                <button class="btn btn-primary" id="get-started">Ready? Get Started!</button>
             </div>
 
             <div id="playerInfo" class="row col-12">
@@ -31,7 +50,7 @@
                     <div class="input-group">
                         <input type="text" id="player" placeholder="Enter your username..." class="form-control" autofocus>
                     <span class="input-group-btn">
-                        <button id="join" class="btn btn-primary" type="button">Join!</button>
+                        <button id="join" class="btn btn-primary" type="button">Join</button>
                     </span>
                     </div>
                 </div>
@@ -50,7 +69,7 @@
                         <div class="input-group">
                             <input type="number" id="year" class="form-control" autofocus>
                     <span class="input-group-btn">
-                        <button id="answerBtn" class="btn btn-primary" type="button">Answer!</button>
+                        <button id="answerBtn" class="btn btn-primary" type="button">Answer</button>
                     </span>
                         </div>
                     </div>
