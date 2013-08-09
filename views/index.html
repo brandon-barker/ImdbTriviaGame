@@ -46,38 +46,44 @@
                 <button class="btn btn-primary" id="get-started">Ready? Get Started!</button>
             </div>
 
-            <div id="playerInfo" class="row col-12">
-                <div class="col-6 text-center">
-                    <div class="input-group">
-                        <input type="text" id="player" placeholder="Enter your username..." class="form-control" autofocus>
+            <div class="player-info">
+                <h2>Welcome to the IMDb Trivia Game!</h2>
+                <h3>Getting Started</h3>
+                <p>
+                    Before you can join the game, you need to enter a username and then click Join. Once 2 people have connected,
+                    the game will begin!
+                </p>
+                <br />
+                <div class="input-group">
+                    <input type="text" id="player" placeholder="Enter your username..." class="form-control" autofocus />
                     <span class="input-group-btn">
                         <button id="join" class="btn btn-primary" type="button">Join</button>
                     </span>
-                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <p id="welcome"></p>
-                <p id="waiting">Waiting for 2 players to join...</p>
-                <p id="starting" style="display: none">Game is ready! Starting...</p>
+                <div class="row col-12">
+                    <p id="waiting"><i class="icon-cog icon-spin"></i> Waiting for players to join...</p>
+                </div>
             </div>
 
             <div class="game">
-                <div class="question row"></div>
+                <h2 id="welcome"></h2>
+                <p id="starting" style="display: none">Game is ready! Starting...</p>
 
                 <div class="row">
-                    <div class="col-6 text-center">
-                        <div class="input-group">
-                            <input type="number" id="year" class="form-control" autofocus>
-                    <span class="input-group-btn">
-                        <button id="answerBtn" class="btn btn-primary" type="button">Answer</button>
-                    </span>
-                        </div>
+                    <div class="question"></div>
+                    <div class="input-group">
+                        <input type="number" id="year" class="form-control" autofocus />
+                        <span class="input-group-btn">
+                            <button id="answerBtn" class="btn btn-primary" type="button">Answer</button>
+                        </span>
                     </div>
                 </div>
 
-                <div class="waiting-for-player row"><p>Waiting for other player's answer...</p></div>
-                <div class="round-count row"><p>Round 1 of 8.</p></div>
+                <div class="waiting-for-player row col-12">
+                    <p><i class="icon-cog icon-spin"></i> Waiting for other player's answer...</p>
+                </div>
+
+                <div class="round-count row col-12"><p>Round 1 of 8.</p></div>
             </div>
         </div>
     </div>

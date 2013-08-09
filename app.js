@@ -39,6 +39,8 @@ app.get('/game/start/', function (req, res) {
 });
 app.get('/game/stop/', function (req, res) {
     start = false;
+    imdb.clearRounds();
+    round = 1;
 });
 app.get('/get/question/:round', function (req, res) {
     var roundNumber = req.params.round;
@@ -127,6 +129,9 @@ io.sockets.on('connection', function (socket) {
 
     socket.on('disconnect', function() {
         if (players[socket.id] != null) {
+            start = false;
+            imdb.clearRounds();
+            round = 1;
             console.log("Player " + players[socket.id].userName + " with id: " + socket.id + " has left.");
             io.sockets.emit('playerLeft', players[socket.id]);
             delete players[socket.id];

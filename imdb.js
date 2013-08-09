@@ -43,7 +43,14 @@ var setupRounds = function () {
     exports.rounds = rounds;
 }
 
+var clearRounds = function () {
+    rounds = [];
+    setupRounds();
+    exports.rounds = rounds;
+}
+
 
 exports.getTop250 = getTop250;
 exports.setupRounds = setupRounds;
+exports.clearRounds = clearRounds;
 exports.ready = ready;

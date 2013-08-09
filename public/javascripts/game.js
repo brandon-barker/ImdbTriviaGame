@@ -1,5 +1,5 @@
 $(function() {
-    var socket = io.connect('http://localhost:3000');
+    var socket = io.connect('http://brandonbarker.net:3000');
 
     var Game = {
         players: [],
@@ -16,8 +16,9 @@ $(function() {
             });
         },
         stop: function () {
-            this.ready = false;
-            this.round = 1;
+            Game.ready = false;
+            Game.round = 1;
+            $.get('/game/stop/');
         },
         startRound: function() {
             Game.ready = true;
@@ -29,9 +30,11 @@ $(function() {
         },
         setQuestion: function(question) {
             console.log(question);
-            $('.question').text('When was the movie "' + question + '" released?');
+            $('#year').val('');
+            $('.question').text('In which year was the movie "' + question + '" released?');
             $('.round-count').text('Round ' + Game.round + ' of 8.')
             $('.game').show();
+            $('.waiting-for-player').hide();
         },
         answerQuestion: function(answer) {
             $.get('/get/answer/' + Player.userName + '/' + Game.round + '/' + answer, function (correct) {
@@ -67,13 +70,23 @@ $(function() {
         e.preventDefault();
         Player.userName = $("#player").val();
         Player.join();
-        $("#playerInfo").hide();
-        $("#welcome").html("Welcome, " + Player.userName + "!");
+        $("#player").attr('disabled', 'disabled');
+        $("#join").addClass('disabled');
+        $("#waiting").show();
+        //$("#playerInfo").hide();
+        $("#welcome").html("Hello, " + Player.userName + "!");
     })
 
     $("#answerBtn").click(function (e) {
         e.preventDefault();
         Game.answerQuestion($("#year").val());
+        $('.waiting-for-player').show();
+    });
+
+    $("#get-started").click(function (e) {
+        e.preventDefault();
+        $(".intro").hide();
+        $(".player-info").show();
     });
 
     socket.on('nextRound', function () {
@@ -96,13 +109,16 @@ $(function() {
             console.log('Game has 2 players, ready to start!');
             Game.ready = true;
             $("#waiting").hide();
-            $("#starting").show();
+            $(".player-info").hide();
+            $(".game").show();
             Game.start();
         } else {
             console.log('1 or more players have left, resetting game...');
             Game.ready = false;
             $("#waiting").show();
-            $("#starting").hide();
+            $(".player-info").show();
+            $(".game").hide();
+            $(".intro").hide();
             Game.stop();
         }
     });
