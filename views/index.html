@@ -66,7 +66,6 @@
             </div>
 
             <div class="game">
-                <h2 id="welcome"></h2>
                 <p id="starting" style="display: none">Game is ready! Starting...</p>
 
                 <div class="row">
@@ -77,13 +76,43 @@
                             <button id="answerBtn" class="btn btn-primary" type="button">Answer</button>
                         </span>
                     </div>
+                    <div class="waiting-for-player row col-12">
+                        <p><i class="icon-cog icon-spin"></i> Waiting for other player's answer...</p>
+                    </div>
+                    <div class="score-row row col-12">Score: <span class="score label label-info">0</span></div>
+                    <div class="round-count row col-12"><p>Round 1 of 8</p></div>
+                    <div class="leave-game row col-12"><button id="leave-game" class="btn btn-danger" onclick="location.reload()">Leave Game</button></div>
                 </div>
+            </div>
 
-                <div class="waiting-for-player row col-12">
-                    <p><i class="icon-cog icon-spin"></i> Waiting for other player's answer...</p>
-                </div>
+            <div class="results">
+                <h2>Game Over!</h2>
 
-                <div class="round-count row col-12"><p>Round 1 of 8.</p></div>
+                <div class="results-success alert alert-success"><i class="icon-trophy icon-2x"></i> <strong>Congratulations!</strong> You have won the prestigious IMDb Trivia Game, give yourself a pat on the back!</div>
+                <div class="results-fail alert alert-danger"><i class="icon-thumbs-down icon-2x"></i> <strong>Fail!</strong> You have lost the IMDb Trivia Game, there is pretty much no hope for you.</div>
+                <div class="results-draw alert alert-info"><i class="icon-meh icon-2x"></i> <strong>Draw!</strong> You have successfully achieved mediocrity, well done.</div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="stats-me-id"></span></td>
+                            <td><span class="stats-me-username"></span></td>
+                            <td><span class="stats-me-score"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="stats-opponent-id"></span></td>
+                            <td><span class="stats-opponent-username"></span></td>
+                            <td><span class="stats-opponent-score"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

@@ -62,8 +62,6 @@ app.get('/get/answer/:player/:round/:answer', function (req, res) {
     } else {
         return res.json(false);
     }
-
-    return res.json(false);
 });
 app.get('/', routes.index);
 
@@ -101,12 +99,22 @@ imdb.getTop250();
 io.sockets.on('connection', function (socket) {
     socket.on('addPlayer', function(player) {
         players[socket.id] = player;
+        players[socket.id].id = socket.id;
         console.log("Player " + player.userName + " with id: " + socket.id + " has joined.");
         for (var key in players) {
             console.log("Players: " + key + " : " + players[key].userName);
         }
         if (Object.size(players) == 2) {
             io.sockets.emit('ready', true);
+        }
+
+        socket.emit('playerId', socket.id);
+    });
+
+    socket.on('logPoints', function(player) {
+        if (players[socket.id] != null) {
+            players[socket.id].score = player.score;
+            console.log(players[socket.id].userName + ' score: ' + players[socket.id].score);
         }
     });
 
@@ -122,7 +130,8 @@ io.sockets.on('connection', function (socket) {
             } else {
                 // Game over!
                 console.log('Game over!');
-                io.sockets.emit('gameOver', true);
+                console.log(players);
+                io.sockets.emit('gameOver', players);
             }
         }
     });

@@ -6,6 +6,11 @@ $(function() {
         ready: false,
         round: 1,
         start: function () {
+            Game.ready = true;
+            $("#waiting").hide();
+            $(".player-info").hide();
+            $(".game").show();
+
             var startGame = $.get('/game/start/');
             startGame.done(function (data) {
                if (!data) {
@@ -18,6 +23,11 @@ $(function() {
         stop: function () {
             Game.ready = false;
             Game.round = 1;
+            Player.score = 0;
+            $("#waiting").show();
+            $(".player-info").show();
+            $(".game").hide();
+            $(".intro").hide();
             $.get('/game/stop/');
         },
         startRound: function() {
@@ -32,21 +42,23 @@ $(function() {
             console.log(question);
             $('#year').val('');
             $('.question').text('In which year was the movie "' + question + '" released?');
-            $('.round-count').text('Round ' + Game.round + ' of 8.')
+            $('.round-count').text('Round ' + Game.round + ' of 8')
             $('.game').show();
             $('.waiting-for-player').hide();
         },
         answerQuestion: function(answer) {
             $.get('/get/answer/' + Player.userName + '/' + Game.round + '/' + answer, function (correct) {
+                if (correct) {
+                    Player.addPoints();
+                } else {
+                    Player.deductPoints();
+                }
+
+                console.log("Player (" + Player.userName + ") score: " + Player.score);
+                $(".score").text(Player.score);
+
                 Game.disableAnswerField();
                 socket.emit("answerQuestion", Game.round);
-
-                if (correct) {
-                    Player.score = Player.score + 5;
-                } else {
-                    Player.score = Player.score - 3;
-                }
-                console.log("Player (" + Player.userName + ") score: " + Player.score);
             });
         },
         enableAnswerField: function() {
@@ -54,15 +66,60 @@ $(function() {
         },
         disableAnswerField: function() {
             $("#answerBtn").addClass('disabled');
+        },
+        showResults: function(players) {
+            $("#waiting").hide();
+            $(".player-info").hide();
+            $(".game").hide();
+            $(".intro").hide();
+            var me = players[Player.id];
+            var opponent;
+
+            for (var i in players) {
+                console.log(players[i].id + ' ' + Player.id);
+                if (players[i].id !== Player.id) {
+                    opponent = players[i];
+                }
+            }
+
+            if (me.score > opponent.score) {
+                // Congrats! You won!
+                $('.results-success').show();
+            }
+            if (me.score < opponent.score) {
+                // Haha! You lost!
+                $('.results-fail').show();
+            }
+            if (me.score == opponent.score) {
+                // Lame, you drew
+                $('.results-draw').show();
+            }
+
+            $('.stats-me-id').text(me.id);
+            $('.stats-me-username').text(me.userName);
+            $('.stats-me-score').text(me.score);
+            $('.stats-opponent-id').text(opponent.id);
+            $('.stats-opponent-username').text(opponent.userName);
+            $('.stats-opponent-score').text(opponent.score);
+            $('.results').show();
         }
     };
 
     var Player = {
+        id: '',
         userName: '',
         score: 0,
         join: function () {
             Game.players.push(this);
             socket.emit("addPlayer", this);
+        },
+        addPoints: function() {
+            Player.score = Player.score + 5;
+            socket.emit("logPoints", this);
+        },
+        deductPoints: function() {
+            Player.score = Player.score - 3;
+            socket.emit("logPoints", this);
         }
     };
 
@@ -74,7 +131,7 @@ $(function() {
         $("#join").addClass('disabled');
         $("#waiting").show();
         //$("#playerInfo").hide();
-        $("#welcome").html("Hello, " + Player.userName + "!");
+        //$("#welcome").html("Hello, " + Player.userName + "!");
     })
 
     $("#answerBtn").click(function (e) {
@@ -89,15 +146,21 @@ $(function() {
         $(".player-info").show();
     });
 
+    socket.on('playerId', function(id) {
+        Player.id = id;
+        console.log(Player.userName + ' with id ' + Player.id);
+    });
+
     socket.on('nextRound', function () {
         console.log('Moving onto the next round...');
         Game.round++;
         Game.startRound();
     });
 
-    socket.on('gameOver', function () {
+    socket.on('gameOver', function (players) {
         console.log('Game over! Well played!');
         Game.stop();
+        Game.showResults(players);
     });
 
     socket.on('playerLeft', function(player) {
@@ -107,18 +170,9 @@ $(function() {
     socket.on('ready', function(ready) {
         if (ready) {
             console.log('Game has 2 players, ready to start!');
-            Game.ready = true;
-            $("#waiting").hide();
-            $(".player-info").hide();
-            $(".game").show();
             Game.start();
         } else {
             console.log('1 or more players have left, resetting game...');
-            Game.ready = false;
-            $("#waiting").show();
-            $(".player-info").show();
-            $(".game").hide();
-            $(".intro").hide();
             Game.stop();
         }
     });

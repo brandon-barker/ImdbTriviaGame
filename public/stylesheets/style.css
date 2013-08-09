@@ -67,16 +67,12 @@ h1, h2, h3, h4, h5 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.game {
-    display: none;
-}
-
 .waiting-for-player {
     display: block;
 }
 
-.question {
-    padding: 10px 0px 5px 15px;
+.question, .round-count, .leave-game, .score-row {
+    padding: 5px;
     font-size: 1.6em;
     font-weight: bold;
     text-shadow: 1px;
@@ -96,8 +92,12 @@ h1, h2, h3, h4, h5 {
     padding: 0px 0px 30px 0px;
 }
 
-#waiting {
+#waiting, .results-success, .results, .results-fail, .results-draw, .game {
     display: none;
+}
+
+.results-success, .results-draw, .results-fail {
+    margin: 25px;
 }
 
 .row h2, .row h3, .row p {

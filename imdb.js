@@ -31,7 +31,7 @@ var setupRounds = function () {
 
         var round = {
             number: i,
-            title: movie.movie,
+            title: decodeURIComponent(movie.movie),
             year: movie.year,
             answers: 0
         }
