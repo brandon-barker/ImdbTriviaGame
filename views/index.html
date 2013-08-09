@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>IMDb Movie Trivia</title>
+    <meta name="description" content="A multiplayer movie quiz game based on the IMDb Top 250 list">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+        <!-- Begin page content -->
+        <div class="container">
+            <div class="page-header">
+                <h1><span class="logo">IMDb</span> IMDb Trivia Game</h1>
+            </div>
+
+            <div id="playerInfo" class="row col-12">
+                <div class="col-6 text-center">
+                    <div class="input-group">
+                        <input type="text" id="player" placeholder="Enter your username..." class="form-control" autofocus>
+                    <span class="input-group-btn">
+                        <button id="join" class="btn btn-primary" type="button">Join!</button>
+                    </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p id="welcome"></p>
+                <p id="waiting">Waiting for 2 players to join...</p>
+                <p id="starting" style="display: none">Game is ready! Starting...</p>
+            </div>
+
+            <div class="game">
+                <div class="question row"></div>
+
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <div class="input-group">
+                            <input type="number" id="year" class="form-control" autofocus>
+                    <span class="input-group-btn">
+                        <button id="answerBtn" class="btn btn-primary" type="button">Answer!</button>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="waiting-for-player row"><p>Waiting for other player's answer...</p></div>
+                <div class="round-count row"><p>Round 1 of 8.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <div class="text-muted">Created by Brandon Barker</div>
+        </div>
+    </div>
+
+    <!--div class="container">
+        <header>
+            <h1><span class="logo">IMDb</span> IMDb Trivia Game</h1>
+        </header>
+
+        <div id="playerInfo" class="row col-12">
+            <div class="col-6 text-center">
+                <div class="input-group">
+                    <input type="text" id="player" placeholder="Enter your username..." class="form-control">
+                    <span class="input-group-btn">
+                        <button id="join" class="btn btn-primary" type="button">Join!</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p id="welcome"></p>
+            <p id="waiting">Waiting for 2 players to join...</p>
+            <p id="starting" style="display: none">Game is ready! Starting...</p>
+        </div>
+
+        <div class="game">
+            <div class="question row"></div>
+
+            <div class="row">
+                <div class="col-6 text-center">
+                    <div class="input-group">
+                    <input type="number" id="year" class="form-control">
+                    <span class="input-group-btn">
+                        <button id="answerBtn" class="btn btn-primary" type="button">Answer!</button>
+                    </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="waiting-for-player row">Waiting for other player's answer...</div>
+            <div class="round-count row">Round 1 of 8.</div>
+        </div>
+    </div-->
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/jquery-1.10.2.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/game.js"></script>
+</body>
+</html>
