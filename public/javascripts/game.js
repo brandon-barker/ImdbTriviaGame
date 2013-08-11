@@ -1,4 +1,13 @@
 $(function() {
+    // Taken from http://stackoverflow.com/questions/17257237/decode-mixed-ascii-codes-from-a-string-in-javascript
+    function decodeHtmlNumeric( str ) {
+        return str.replace( /&#([0-9]{1,7});/g, function( g, m1 ){
+            return String.fromCharCode( parseInt( m1, 10 ) );
+        }).replace( /&#[xX]([0-9a-fA-F]{1,6});/g, function( g, m1 ){
+                return String.fromCharCode( parseInt( m1, 16 ) );
+            });
+    }
+
     var socket = io.connect('http://brandonbarker.net:3000');
 
     var Game = {
@@ -42,7 +51,7 @@ $(function() {
         setQuestion: function(question) {
             console.log(question);
             $('#year').val('');
-            $('.question').text('In which year was the movie "' + question + '" released?');
+            $('.question').text('In which year was the movie "' + decodeHtmlNumeric(question) + '" released?');
             $('.round-count').text('Round ' + Game.round + ' of 8')
             $('.game').show();
             $('.waiting-for-player').hide();
